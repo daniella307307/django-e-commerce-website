@@ -20,6 +20,6 @@ import os
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('user.urls')),
-    path('exchange', include('exchangerate.urls'))
+    # path('', include('user.urls')),
+    path('', include('exchangerate.urls'))
 ]

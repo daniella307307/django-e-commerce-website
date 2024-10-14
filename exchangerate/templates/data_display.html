@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exchange Rates</title>
+</head>
+<body>
+    <h1>Exchange Rates for {{ base_code }}</h1>
+    <p>Last Updated: {{ last_update }}</p>
+    <p>Next Update: {{ next_update }}</p>
+
+    <table>
+        <tr>
+            <th>Currency</th>
+            <th>Rate</th>
+        </tr>
+        {% for currency, rate in rates.items %}
+        <tr>
+            <td>{{ currency }}</td>
+            <td>{{ rate }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
