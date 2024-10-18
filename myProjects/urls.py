@@ -20,6 +20,5 @@ import os
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    # path('', include('user.urls')),
-    path('', include('exchangerate.urls'))
+    path('', include('transportsystem.urls'))
 ]
