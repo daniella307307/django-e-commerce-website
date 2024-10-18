@@ -12,17 +12,10 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 
 from pathlib import Path
 
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
-
-# SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-y_)f2srf&0l!+es=laz$wj3o8hw+i=j&b*ax#0cn)@i%4zn_&8'
 
-# SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
 ALLOWED_HOSTS = []
@@ -37,9 +30,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'user',
-    'exchangerate',
-    'transportsystem'
+    'transportsystem',
 ]
 
 MIDDLEWARE = [
@@ -76,8 +67,12 @@ WSGI_APPLICATION = 'myProjects.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'vehicle_tracking',
+        'USER': 'postgres',
+        'PASSWORD':'Bruno@1980',
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
 
